@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Pilotos</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+    <main>
+        <header>
+            <div class="bandeiraQ"></div>
+            <h1>Cadastro de Pilotos</h1>
+            <p>Entre com os dados do piloto para a nova temporada</p>
+        </header>
+
+        <form id="pilotoForm" class="form" novalidate>
+            <section class="formSection">
+                <h2 class="sectionTitle">
+                    <span class="icon">🏁</span>
+                    Dados do Piloto
+                </h2>
+                <div class="formGrupo">
+                    <label for="nome">Nome do Piloto:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Ex: Max Verstappen" required>
+                    <span class="erroMensagem" id="erro-nome" ></span>
+                </div>
+                <div class="formGrupo">
+                    <label for="equipe">Equipe:</label>
+                    <select name="equipe" id="equipe">
+                        <option value>Selecione uma Equipe</option>
+                        <option value="red-bull">Oracle Red Bull Racing</option>
+                        <option value="mercedes">Mercedes-AMG Petronas</option>
+                        <option value="ferrari">Scuderia Ferrari HP</option>
+                        <option value="mclaren">McLaren F1 Team</option>
+                        <option value="alpine">BWT Alpine F1 Team</option>
+                        <option value="aston-martin">Aston Martin Cognizant F1 Team</option>
+                        <option value="red-bull-b">Visa Cash App Racing Bulls</option>
+                        <option value="haas">TGR Haas F1 Team</option>
+                        <option value="ripsauber">Audi Revolut F1 Team</option>
+                        <option value="williams">Williams Racing</option>
+                        <option value="cadillac">Cadillac F1 Team</option>
+                    </select>
+                    <span class="erroMensagem" id="erro-equipe"></span>
+                </div>
+            </section>
+
+            <section class="formSection">
+                <h2 class="sectionTitle">
+                    <span class="icon">📍</span>
+                    Endereço
+                </h2>
+                <div class="formGrupo">
+                    <label for="cep">CEP:</label>
+                    <div class="inputCstatus">
+                        <input type="text" id="cep" name="cep" placeholder="Ex: 12345-678" maxlength="9" required>
+                        <span class="cepStatus" id="cep-status"></span>
+                    </div>
+                    <span class="ajudaMensagem">Digite o CEP para preencher o endereço automaticamente</span>
+                    <span class="erroMensagem" id="erro-cep"></span>
+                </div>
+                <div class="formGrupo">
+                    <label for="rua">Logradouro:</label>
+                    <input type="text" id="rua" name="rua" placeholder="Rua, Avenida, etc." minlength="5" required>
+                    <span class="erroMensagem" id="erro-rua"></span>
+                </div>
+
+                <div class="formLinha">
+                    <div class="formGrupo">
+                        <label for="numero">Número:</label>
+                        <input type="text" id="numero" name="numero" placeholder="123" required>
+                        <span class="erroMensagem" id="erro-numero"></span>
+                    </div>
+                    <div class="formGrupo">
+                        <label for="uf">UF:</label>
+                        <input type="text" id="uf" name="uf" placeholder="SP" maxlength="2" required>
+                        <span class="erroMensagem" id="erro-uf"></span>
+                    </div>
+                </div>
+
+                <div class="formGrupo">
+                    <label for="complemento">Complemento:</label>
+                    <input type="text" id="complemento" name="complemento" placeholder="Apto, Bloco, etc... (opcional)">
+                </div>
+
+                <div class="formGrupo">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" placeholder="Preenchido automaticamente" readonly>
+                </div>
+            </section>
+
+            <button type="submit" class="submitBtn">
+                <span class="btn-icon">🏁</span>
+                Cadastrar Piloto
+            </button>
+        </form>
+
+        <div id="sucessoModal" class="modal hidden">
+            <div class="sucessoContent">
+                <div class="sucessoIcone">✅</div>
+                <h3>Piloto Cadastrado!</h3>
+                <p id="sucessoMensagem"></p>
+                <button id="sucessoFechar" class="fechar-btn">Fechar</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
