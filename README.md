@@ -2,7 +2,7 @@
 
 Esse projeto é um formulário interativo, desenvolvido como parte da atividade formativa (AVD1) da disciplina Linguagem de Programação Web II (LPW2).
 
-Em vez de só fazer uma página simples que valida o CEP, decidi criar um "Cadastro para Pilotos", onde o usuário pode colocar Nome, Equipe, CEP, Logradouro, Número e UF e o site um por um.
+Em vez de só fazer uma página simples que valida o CEP, decidi criar um "Cadastro para Pilotos", onde o usuário pode colocar Nome, Equipe, CEP, Logradouro, Número e UF.
 
 ## Objetivo Principal
 
